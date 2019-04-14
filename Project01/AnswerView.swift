@@ -18,19 +18,19 @@ class AnswerView: UIViewController, UITextFieldDelegate {
     @IBOutlet var labelResult: UILabel!
     
     @IBAction func buttontodayFineDust(_ sender: UIButton) {
-        let num = Int(fineDustTextField.text!)!
+        let num = Double(fineDustTextField.text!)!
         
-        if (0 <= num && num <= 40) {
+        if (0.0 <= num && num <= 40.0) {
             labelResult.text = "좋음"
             
         }
-        else if (41 <= num && num <= 80) {
+        else if (40.0 < num && num <= 80.0) {
             labelResult.text = "보통"
         }
-        else if (81 <= num && num <= 150) {
+        else if (80.0 < num && num <= 150.0) {
             labelResult.text = "나쁨"
         }
-        else if (151 <= num) {
+        else if (150.0 < num) {
             labelResult.text = "매우 나쁨"
         }
         
